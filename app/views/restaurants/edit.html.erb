@@ -1,0 +1,21 @@
+<%= form_for @restaurant do |f| %>
+
+<%=f.label :name, "enter a name"%>
+<%=f.text_field :name%>
+
+<%=f.label :address, "enter an adress"%>
+<%=f.text_field :address %>
+
+<%=f.label :stars, "How many stars?"%>
+<%=f.number_field :stars %>
+<%=f.submit %>
+<% end %>
+
+<!--
+
+<form action="/restaurants" method="patch">
+  <input type="text" name="restaurant[name]">
+  <input type="text" name="restaurant[address]">
+  <input type="number" name="restaurant[stars]">
+  <input type="submit" value="Create Restaurant">
+</form> -->

@@ -1,9 +1,25 @@
-<form action="/restaurants" method="post">
+<p>New.html.erb</p>
+
+<%= form_for @restaurant do |f| %>
+
+  <%= f.label :name, "restaurant name" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address, "enter an adress" %>
+  <%= f.text_field :address %>
+
+  <%= f.label :stars, "How many stars?" %>
+  <%= f.number_field :stars %>
+
+  <%= f.submit %>
+<% end %>
+
+<!-- <form action="/restaurants" method="post">
   <input type="text" name="restaurant[name]">
   <input type="text" name="restaurant[address]">
   <input type="number" name="restaurant[stars]">
   <input type="submit" value="Create Restaurant">
-</form>
+</form> -->
 
 <!-- POST  /restaurants(.:format) restaurants#create -->
 

@@ -1,5 +1,13 @@
+<p>Show.html.erb</p>
+
 <h1><%= @restaurant.name %></h1>
-<p><%= @restaurant.address %></p>
-<p><%= "*" * @restaurant.stars %></p>
+<p>Adresse: <%= @restaurant.address %></p>
+<p>Stars <%= "*" * @restaurant.stars %></p>
 
 <%= link_to "Back to list", restaurants_path %>
+
+<%= link_to "Update", edit_restaurant_path(@restaurant) %>
+
+<%= link_to "Delete", restaurant_path(@restaurant),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>

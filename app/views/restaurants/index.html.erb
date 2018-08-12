@@ -1,10 +1,13 @@
-<h1>Les restaurants s'affichent içi</h1>
+<p>Index.html.erb</p>
 
+<h1>Les restaurants s'affichent içi</h1>
+<%= link_to "Create a new restaurant", new_restaurant_path %>
 <% @restaurants.each do |restaurant| %>
   <h2><%= restaurant.name %></h2>
   <p><%= restaurant.address %></p>
-  <p><%= "*" * restaurant.stars %></p>
+  <p>Stars <%= "*" * restaurant.stars %></p>
   <%= link_to "Allez voir", restaurant_path(id: restaurant.id) %>
+
 <% end %>
 
 <!-- à comparer avec rails routes -->

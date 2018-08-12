@@ -1,14 +1,17 @@
+<p>Edit.html.erb</p>
+
 <%= form_for @restaurant do |f| %>
 
-<%=f.label :name, "enter a name"%>
-<%=f.text_field :name%>
+  <%= f.label :name, "restaurant name" %>
+  <%= f.text_field :name %>
 
-<%=f.label :address, "enter an adress"%>
-<%=f.text_field :address %>
+  <%= f.label :address, "enter an adress" %>
+  <%= f.text_field :address %>
 
-<%=f.label :stars, "How many stars?"%>
-<%=f.number_field :stars %>
-<%=f.submit %>
+  <%= f.label :stars, "How many stars?" %>
+  <%= f.number_field :stars %>
+
+  <%= f.submit %>
 <% end %>
 
 <!--
